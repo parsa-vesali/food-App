@@ -4,6 +4,7 @@ import { StatusBar } from 'expo-status-bar'
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { BellIcon, MagnifyingGlassIcon } from 'react-native-heroicons/outline'
 import Categores from '../Components/Categores';
+import Recipes from '../Components/Recipes';
 
 
 
@@ -59,6 +60,10 @@ const HomeScreen = () => {
                     <Categores activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
                 </View>
 
+                {/* RECIPES */}
+                <View>
+                    <Recipes />
+                </View>
 
 
             </ScrollView>
