@@ -1,16 +1,16 @@
 import { View, Text, Pressable, Image } from 'react-native'
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import MasonryList from '@react-native-seoul/masonry-list';
-import { categories } from '../constants'
+import { categoriesData } from '../constants'
 import Animated, { FadeInDown } from 'react-native-reanimated';
 
-const Recipes = () => {
+const Recipes = ({ categories }) => {
     return (
         <View className="mx-4 space-y-3">
             <Text className="font-semibold text-neutral-600 " style={{ fontSize: hp(3) }}>Recipes</Text>
             <View>
                 <MasonryList
-                    data={categories}
+                    data={categoriesData}
                     keyExtractor={(item) => item.id}
                     numColumns={2}
                     showsVerticalScrollIndicator={false}

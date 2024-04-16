@@ -5,6 +5,8 @@ import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-nat
 import { BellIcon, MagnifyingGlassIcon } from 'react-native-heroicons/outline'
 import Categores from '../Components/Categores';
 import Recipes from '../Components/Recipes';
+import { categoriesData } from '../constants';
+
 
 
 
@@ -62,7 +64,7 @@ const HomeScreen = () => {
 
                 {/* RECIPES */}
                 <View>
-                    <Recipes />
+                    <Recipes Categores={categoriesData} />
                 </View>
 
 

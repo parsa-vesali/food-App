@@ -1,7 +1,7 @@
 import React from 'react'
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { View, Text, ScrollView, TouchableOpacity, Image } from 'react-native'
-import { categories } from '../constants/index'
+import { categoriesData } from '../constants/index'
 import Animated, { FadeInDown } from 'react-native-reanimated';
 
 const Categores = ({ activeCategory, setActiveCategory }) => {
@@ -14,7 +14,7 @@ const Categores = ({ activeCategory, setActiveCategory }) => {
                 contentContainerStyle={{ paddingHorizontal: 15 }}
             >
                 {
-                    categories.map(item => {
+                    categoriesData.map(item => {
                         let isActive = item.title == activeCategory
                         let activeButtonClass = isActive ? ' bg-amber-400' : " bg-black/10"
                         return (
